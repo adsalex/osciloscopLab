@@ -24,18 +24,30 @@ public class PlayerControl : MonoBehaviour {
     float rotationCam =0f;
     Quaternion camRotation;
 
+    AudioSource audioSource;
+
+
+
     void Start () {
 		cam = transform.Find("Main Camera");
         camRotation = cam.rotation;
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         movePlayer();
         moveCamera();
-        //Debug.Log(transform.eulerAngles.x);
+        playSFX();
 	}
-
+    void playSFX() 
+    {
+        
+        {
+            audioSource.enabled= (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0);
+        }
+        
+    }
     void movePlayer() 
     {
         transform.Translate(
