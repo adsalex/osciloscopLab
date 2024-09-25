@@ -836,7 +836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4927122430308532}
   m_Layer: 0
-  m_Name: lab_stand_VERf
+  m_Name: lab_stand_VER2_5e_prefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1316,7 +1316,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1674862418289618}
   m_LocalRotation: {x: 0.5, y: 0.49999997, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: -18.180462, y: -0.20697385, z: 1.5046921}
+  m_LocalPosition: {x: -18.180462, y: -0.20697385, z: 1.04}
   m_LocalScale: {x: 250, y: 250, z: 300}
   m_Children:
   - {fileID: 4888783098491080}
@@ -1982,9 +1982,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688150066500692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62, y: 1.367, z: 1.472}
-  m_LocalScale: {x: 0.065, y: 0.065, z: 0.065}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20666668, y: 0.76699996, z: 0.269}
+  m_LocalScale: {x: 0.021666666, y: 0.065, z: 0.01625}
   m_Children:
   - {fileID: 4107027691457780}
   - {fileID: 4531699978648024}
@@ -2201,7 +2201,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100024, guid: 26205df32181f794ba2cddd60ef54cde, type: 3}
+  - {fileID: 2100000, guid: a3ccfe096a0d2a74c9e04e07a326a21b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3255,7 +3255,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100026, guid: 26205df32181f794ba2cddd60ef54cde, type: 3}
+  - {fileID: 2100000, guid: 3c2add0c97511644dbd79b0b4259750b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4003,7 +4003,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100022, guid: 26205df32181f794ba2cddd60ef54cde, type: 3}
+  - {fileID: 2100000, guid: a3ccfe096a0d2a74c9e04e07a326a21b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -153,24 +153,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4927122430308532, guid: ee7a863d043fe7b43be78672fd96df0c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.021666666
+    - target: {fileID: 1688150066500692, guid: ee7a863d043fe7b43be78672fd96df0c, type: 2}
+      propertyPath: m_Name
+      value: lab_stand_VERf
       objectReference: {fileID: 0}
-    - target: {fileID: 4927122430308532, guid: ee7a863d043fe7b43be78672fd96df0c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.01625
-      objectReference: {fileID: 0}
-    - target: {fileID: 23811237612612390, guid: ee7a863d043fe7b43be78672fd96df0c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a3ccfe096a0d2a74c9e04e07a326a21b, type: 2}
-    - target: {fileID: 23071506080904416, guid: ee7a863d043fe7b43be78672fd96df0c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a3ccfe096a0d2a74c9e04e07a326a21b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee7a863d043fe7b43be78672fd96df0c, type: 2}
   m_IsPrefabParent: 0
@@ -373,13 +359,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362091868}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1452169790}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!81 &362091870
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1079,7 +1065,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: abedba9f87900d24e91555e9422c060c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1298,6 +1284,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1452169790}
+  - component: {fileID: 1452169791}
   m_Layer: 0
   m_Name: flyCamera
   m_TagString: Untagged
@@ -1319,6 +1306,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452169791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452169789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a456e09c6c14ac94ca4cc64dee99a673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 3
+  RotationSpeedX: 45
+  RotationSpeedY: 45
+  xlow: -1
+  xhigh: 1
+  zlow: -2
+  zhigh: 2
+  scroll_coeff: 50
+  scrollLimitLow: -3.5
+  scrollLimitHigh: 0
 --- !u!1 &1550013864
 GameObject:
   m_ObjectHideFlags: 0

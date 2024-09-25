@@ -66,7 +66,6 @@ public class PlayerControl : MonoBehaviour {
     }
     void moveCamera() 
     {
-        //l
         rotationCam += -Input.GetAxis("Mouse Y") * cameraRotationLimitX * Time.deltaTime;
         rotationCam = Mathf.Clamp(rotationCam, -cameraRotationLimitX, cameraRotationLimitX);
         cam.localRotation = Quaternion.Euler(rotationCam, cam.localRotation.y, cam.localRotation.z);
