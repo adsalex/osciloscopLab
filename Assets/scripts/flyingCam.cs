@@ -75,14 +75,18 @@ public class flyingCam : MonoBehaviour {
 
     void moveCamera()
     {
-    
-        
-        Vector3 newpos = transform.position + new Vector3
-            (
-                 Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")
-            )
-            * Time.deltaTime * MoveSpeed; ;
-        
+
+        transform.Translate
+            (new Vector3 (Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))
+            * Time.deltaTime * MoveSpeed
+            );
+
+        Vector3 newpos = transform.position;// + new Vector3
+        //    (
+        //         Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")
+        //    )
+        //    * Time.deltaTime * MoveSpeed; ;
+
         newpos.x = ControlDistancef(newpos.x, xlow, xhigh);
         newpos.z = ControlDistancef(newpos.z, zlow, zhigh);
         transform.position = newpos;
