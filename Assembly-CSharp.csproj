@@ -54,7 +54,9 @@
      <Compile Include="Assets\scripts\AnimSwitch.cs" />
      <Compile Include="Assets\scripts\flyingCam.cs" />
      <Compile Include="Assets\scripts\Glower.cs" />
+     <Compile Include="Assets\scripts\Hider.cs" />
      <Compile Include="Assets\scripts\PlayerControl.cs" />
+     <Compile Include="Assets\scripts\Tipper.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
