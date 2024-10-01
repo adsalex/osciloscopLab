@@ -24,7 +24,7 @@ public class PortalMenu : MonoBehaviour {
 			buffer.transform.Translate(0,-45*i,0);
 			PortalButton pb = buffer.GetComponent<PortalButton>();
 			pb.camDist= camereDist[i];
-            //pb.pose = points[i];
+            pb.pose = points[i];
 			GameObject labelObj = buffer.transform.Find("Text").gameObject;
 			labelObj.GetComponent<Text>().text = label[i];
         }

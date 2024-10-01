@@ -5,13 +5,22 @@ using UnityEngine;
 public class PortalButton : MonoBehaviour {
 	public Transform pose;
 	public float camDist;
-	// Use this for initialization
-	void Start () {
-		
+	static GameObject flyCam;
+
+    static GameObject frictingCam;
+    // Use this for initialization
+    void Start () {
+		flyCam = GameObject.Find("flyCamera");
+		frictingCam = flyCam.transform.Find("Camera").gameObject;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void moveToPoint() 
+	{
+		flyCam.transform.position = pose.position;
+		flyCam.transform.rotation = pose.rotation;
+		Vector3 buff = frictingCam.transform.localPosition;
+		buff.z = camDist;
+		frictingCam.transform.localPosition = buff;
 	}
 }
