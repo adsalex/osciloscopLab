@@ -14,14 +14,21 @@ public class PortalMenu : MonoBehaviour {
     float[] camereDist;
     [SerializeField]
     string[] label;
+	float proportion ;
+
 
 
     // Use this for initialization
     void Start () {
+		proportion = Screen.height;
+		
+
+        Debug.Log(proportion);
+		proportion /= 720;
 		for(int i = 0;i<points.Length && i<camereDist.Length && i<label.Length;i++)
 		{
 			GameObject buffer = Instantiate(button, this.transform);
-			buffer.transform.Translate(0,-45*i,0);
+			buffer.transform.Translate(0, -60*i*proportion,0);
 			PortalButton pb = buffer.GetComponent<PortalButton>();
 			pb.camDist= camereDist[i];
             pb.pose = points[i];
