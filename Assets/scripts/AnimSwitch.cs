@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class AnimSwitch : MonoBehaviour,IPointerClickHandler {
+public class AnimSwitch : MonoBehaviour, IPointerClickHandler {
 
 	Animator animator;
-	bool state;
-	
+	bool state = false;
+	public bool stateReader { get { return state; } }
 	AudioSource audio;
 	void Start () {
 		animator = GetComponent<Animator>();

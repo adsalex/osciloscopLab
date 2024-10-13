@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PortalMenu : MonoBehaviour {
@@ -14,6 +15,8 @@ public class PortalMenu : MonoBehaviour {
     float[] camereDist;
     [SerializeField]
     string[] label;
+	[SerializeField]
+    GameObject[] elems;
 	float proportion ;
 
 
@@ -34,6 +37,8 @@ public class PortalMenu : MonoBehaviour {
             pb.pose = points[i];
 			GameObject labelObj = buffer.transform.Find("Text").gameObject;
 			labelObj.GetComponent<Text>().text = label[i];
+			pb.obj = elems[i];
+			
         }
 
     }

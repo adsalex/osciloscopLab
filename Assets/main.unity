@@ -1556,6 +1556,13 @@ MonoBehaviour:
   - "\u043E\u0441\u0446\u0438\u043B\u043B\u043E\u0433\u0440\u0430\u0444"
   - "\u043C\u0430\u0433-\u043D \u043A\u043E\u043D\u0434\u0435\u043D\u0441\u0430\u0442\u043E\u0440\u043E\u0432"
   - "\u043C\u0430\u0433-\u043D \u0440\u0435\u0437\u0438\u0441\u0442\u043E\u0440\u043E\u0432"
+  elems:
+  - {fileID: 998565670}
+  - {fileID: 908893303}
+  - {fileID: 1269685859}
+  - {fileID: 1487766669}
+  - {fileID: 1518355115}
+  - {fileID: 1803612730}
 --- !u!1 &489469533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1853,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementTip: "\u0420\u0443\u0447\u043A\u0430 \u0434\u043B\u044F \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438
     \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F"
+--- !u!114 &699101787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699101780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 699101788}
+          m_MethodName: VoltageSwitch
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &699101788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699101780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10da3ceb5a94ed499fed4e402b19bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voltageText: {fileID: 1651703361}
 --- !u!1 &701291638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,6 +3016,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1263038620 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114823129225977450, guid: 3a56e5139d1b60f4bb4a1b619f95355e,
+    type: 2}
+  m_PrefabInternal: {fileID: 344538203}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1269685859 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1266266432347516, guid: f5c0685841feb3c4695a8cb0754abde3,
@@ -3211,6 +3266,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bcff0675925e30a41b25b4f4abe1e4c6, type: 2}
+    - target: {fileID: 4511898282082648, guid: f5c0685841feb3c4695a8cb0754abde3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511898282082648, guid: f5c0685841feb3c4695a8cb0754abde3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511898282082648, guid: f5c0685841feb3c4695a8cb0754abde3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511898282082648, guid: f5c0685841feb3c4695a8cb0754abde3, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5c0685841feb3c4695a8cb0754abde3, type: 2}
   m_IsPrefabParent: 0
@@ -3767,7 +3838,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1518355115}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 352bd88d71ad9b9419c46ec7ad3bf2d3, type: 3}
   m_Name: 
@@ -4088,6 +4159,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1597359930}
+--- !u!114 &1621964341 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114518460396291376, guid: 3a56e5139d1b60f4bb4a1b619f95355e,
+    type: 2}
+  m_PrefabInternal: {fileID: 344538203}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1639647415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,6 +4251,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1651703361 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114065608075754186, guid: 4e8d0ad283fc0fa46b9d7c774b21ea45,
+    type: 2}
+  m_PrefabInternal: {fileID: 1522224228}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1698201241
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,6 +4501,29 @@ MonoBehaviour:
   elementTip: "\u0420\u0435\u0437\u0438\u0441\u0442\u0438\u0432\u043D\u044B\u0439
     \u043C\u0430\u0433\u0430\u0437\u0438\u043D \u0438\u043D\u0442\u0435\u0433\u0440\u0438\u0440\u0443\u044E\u0449\u0435\u0439
     \u0446\u0435\u043F\u0438"
+--- !u!1 &1840945246 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1007110682191482, guid: 3a56e5139d1b60f4bb4a1b619f95355e,
+    type: 2}
+  m_PrefabInternal: {fileID: 344538203}
+--- !u!114 &1840945247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840945246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55663b9e278108344ac4a46a83341691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voltage: 0
+  resistance: 1000
+  text: {fileID: 1621964341}
+  image: {fileID: 1263038620}
+  diaposoneSwitch: {fileID: 291547733}
+  powerSwitch: {fileID: 717905905}
+  vs: {fileID: 699101788}
 --- !u!1 &1897414798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,7 +5223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2079501126
 RectTransform:
   m_ObjectHideFlags: 0
