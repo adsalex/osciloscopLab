@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\AmpereScript.cs" />
      <Compile Include="Assets\scripts\AnimSwitch.cs" />
+     <Compile Include="Assets\scripts\BankHandleScript.cs" />
      <Compile Include="Assets\scripts\flyingCam.cs" />
      <Compile Include="Assets\scripts\Glower.cs" />
      <Compile Include="Assets\scripts\Hider.cs" />
