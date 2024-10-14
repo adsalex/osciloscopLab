@@ -57,6 +57,7 @@
      <Compile Include="Assets\scripts\flyingCam.cs" />
      <Compile Include="Assets\scripts\Glower.cs" />
      <Compile Include="Assets\scripts\Hider.cs" />
+     <Compile Include="Assets\scripts\oscilosopeTurnOn.cs" />
      <Compile Include="Assets\scripts\PlayerControl.cs" />
      <Compile Include="Assets\scripts\PortalButton.cs" />
      <Compile Include="Assets\scripts\PortalMenu.cs" />

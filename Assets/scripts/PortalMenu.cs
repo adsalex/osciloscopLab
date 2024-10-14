@@ -25,8 +25,6 @@ public class PortalMenu : MonoBehaviour {
     void Start () {
 		proportion = Screen.height;
 		
-
-        Debug.Log(proportion);
 		proportion /= 720;
 		for(int i = 0;i<points.Length && i<camereDist.Length && i<label.Length;i++)
 		{
