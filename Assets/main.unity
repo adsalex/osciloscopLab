@@ -2969,10 +2969,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line1: {fileID: 588968194}
   line2: {fileID: 1289323096}
-  ampModifyer: 1.8
+  ampModifyer: 2.1999998
   magnitudeModifyer: 0.56
-  waveShift1: -1
-  waveShift2: 1
+  allWavesShiftX: -2.68
+  secondWaveShiftX: 1
+  secondWaveShiftY: 0
   CapasitorHandles:
   - {fileID: 1412253621}
   - {fileID: 914815455}
@@ -5679,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2079501126
 RectTransform:
   m_ObjectHideFlags: 0
