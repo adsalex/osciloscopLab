@@ -2969,6 +2969,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line1: {fileID: 588968194}
   line2: {fileID: 1289323096}
+  ampModifyer: 1.8
+  magnitudeModifyer: 0.56
+  waveShift1: -1
+  waveShift2: 1
   CapasitorHandles:
   - {fileID: 1412253621}
   - {fileID: 914815455}
