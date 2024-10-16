@@ -55,8 +55,6 @@ public class StandScript : MonoBehaviour {
 
     void plotGraph (LineRenderer line, float additionalShift = 0)
     {
-        float maxVal = 0;  
-
         for (int i = 0; i < posCount; i++)
         {
             Vector3 buff = line.GetPosition(i);
@@ -65,17 +63,7 @@ public class StandScript : MonoBehaviour {
             x = Mathf.Clamp(x, -Mathf.PI / 2, Mathf.PI / 2);
             float f = Mathf.Sin(x) * maxAmplitude * magnitudeModifyer;
 
-            
-            if (x >= 0 && x <= Mathf.PI / 2)
-            {
-                buff.y = f; 
-                maxVal = f; 
-            }
-            else
-            {
-               
-                buff.y = maxVal;             }
-
+            buff.y = f;
             line.SetPosition(i, buff);
         }
     }
