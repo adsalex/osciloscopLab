@@ -62,7 +62,7 @@ public class StandScript : MonoBehaviour {
         for (int i = 0; i < posCount; i++)
         {
             Vector3 buff = line.GetPosition(i);
-            float x = (buff.x / maxAmplitude)*voltagePercentage * proportionMod * ampModifyer + allWavesShiftX*proportionMod*voltagePercentage + additionalShiftX;
+            float x = (buff.x / maxAmplitude)*voltagePercentage  * ampModifyer + allWavesShiftX*voltagePercentage + additionalShiftX;
 
             x = Mathf.Clamp(x, -Mathf.PI / 2, Mathf.PI / 2);
             float f =( Mathf.Sin(x)) * voltagePercentage * maxAmplitude* proportionMod * magnitudeModifyer;
