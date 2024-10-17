@@ -2969,11 +2969,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line1: {fileID: 588968194}
   line2: {fileID: 1289323096}
+  voltage1: 0
+  capacity: 0
   ampModifyer: 2.1999998
   magnitudeModifyer: 0.56
   allWavesShiftX: -2.68
   secondWaveShiftX: 1
   secondWaveShiftY: 0
+  maxVoltage: 220
+  resistance: 0
+  resistanceProportion: 1
   CapasitorHandles:
   - {fileID: 1412253621}
   - {fileID: 914815455}
@@ -2982,6 +2987,7 @@ MonoBehaviour:
   - {fileID: 1546706277}
   - {fileID: 660147442}
   - {fileID: 1295713662}
+  transformator: {fileID: 699101788}
 --- !u!1 &998565670 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1772766425468006, guid: f5c0685841feb3c4695a8cb0754abde3,

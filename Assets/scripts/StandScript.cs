@@ -10,7 +10,8 @@ public class StandScript : MonoBehaviour {
 	const int posCount = 20;
     [SerializeField]
     const float maxAmplitude = 0.14f;
-	public float voltage1;
+    [SerializeField]
+    public float voltage;
 	
     public float capacity;
 	
@@ -40,7 +41,7 @@ public class StandScript : MonoBehaviour {
     [SerializeField]
     VoltageScript transformator;
     float capacityProportion = 1f;
-    float baseCapacity = 1000f;
+    float baseCapacity = 100f;
     
 
     // Use this for initialization
@@ -52,9 +53,9 @@ public class StandScript : MonoBehaviour {
 	void Update () {
         resistance = ResistorHandles[0].HandleValue*1000+ ResistorHandles[1].HandleValue * 100+ ResistorHandles[2].HandleValue * 10;
         capacity= CapasitorHandles[0].HandleValue * 10 + CapasitorHandles[1].HandleValue  + CapasitorHandles[2].HandleValue * 0.1f;
-        voltage1 = transformator.voltageProp;
+        voltage = transformator.voltageProp;
         resistanceProportion = resistance / baseResistance;
-        voltagePercentage = voltage1/maxVoltage;
+        voltagePercentage = voltage/maxVoltage;
         capacityProportion = capacity / baseCapacity;
 		plotGraph(line1, -resistanceProportion * 0.5f, capacityProportion);
         plotGraph(line2,resistanceProportion*0.5f,capacityProportion);
