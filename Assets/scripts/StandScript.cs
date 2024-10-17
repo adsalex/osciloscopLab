@@ -37,7 +37,8 @@ public class StandScript : MonoBehaviour {
 	BankHandleScript[] CapasitorHandles;
 	[SerializeField]
     BankHandleScript[] ResistorHandles;
-
+    [SerializeField]
+    VoltageScript transformator;
     float capacityProportion = 1f;
     float baseCapacity = 1000f;
     
@@ -49,6 +50,9 @@ public class StandScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        resistance = ResistorHandles[0].HandleValue*1000+ ResistorHandles[1].HandleValue * 100+ ResistorHandles[2].HandleValue * 10;
+        capacity= CapasitorHandles[0].HandleValue * 10 + CapasitorHandles[1].HandleValue  + CapasitorHandles[2].HandleValue * 0.1f;
+        voltage1 = transformator.voltageProp;
         resistanceProportion = resistance / baseResistance;
         voltagePercentage = voltage1/maxVoltage;
         capacityProportion = capacity / baseCapacity;
