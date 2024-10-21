@@ -1075,6 +1075,17 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114518460396291376, guid: 3a56e5139d1b60f4bb4a1b619f95355e,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b80d82469cf610748acd2cb554498834,
+        type: 3}
+    - target: {fileID: 114518460396291376, guid: 3a56e5139d1b60f4bb4a1b619f95355e,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a56e5139d1b60f4bb4a1b619f95355e, type: 2}
   m_IsPrefabParent: 0
@@ -2969,7 +2980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line1: {fileID: 588968194}
   line2: {fileID: 1289323096}
-  voltage1: 0
+  voltage: 0
   capacity: 0
   ampModifyer: 2.1999998
   magnitudeModifyer: 0.56
@@ -4376,6 +4387,17 @@ Prefab:
     - target: {fileID: 1480610844443818, guid: 4e8d0ad283fc0fa46b9d7c774b21ea45, type: 2}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114065608075754186, guid: 4e8d0ad283fc0fa46b9d7c774b21ea45,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b80d82469cf610748acd2cb554498834,
+        type: 3}
+    - target: {fileID: 114065608075754186, guid: 4e8d0ad283fc0fa46b9d7c774b21ea45,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e8d0ad283fc0fa46b9d7c774b21ea45, type: 2}

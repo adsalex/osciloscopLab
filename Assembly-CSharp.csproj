@@ -61,6 +61,8 @@
      <Compile Include="Assets\scripts\PlayerControl.cs" />
      <Compile Include="Assets\scripts\PortalButton.cs" />
      <Compile Include="Assets\scripts\PortalMenu.cs" />
+     <Compile Include="Assets\scripts\practiceScript.cs" />
+     <Compile Include="Assets\scripts\scenicEvent.cs" />
      <Compile Include="Assets\scripts\StandScript.cs" />
      <Compile Include="Assets\scripts\Tipper.cs" />
      <Compile Include="Assets\scripts\VoltageScript.cs" />
