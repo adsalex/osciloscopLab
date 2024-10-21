@@ -8,6 +8,7 @@ public class AmpereScript : MonoBehaviour {
 	[SerializeField]
 	float resistance =1000;
     float current = 0;
+    public float Current { get { return current; } }
     [SerializeField]
 	Text text;
 	[SerializeField]

@@ -12,7 +12,7 @@ public class VoltageScript : MonoBehaviour {
     const float voltageLim = 240;
 	[SerializeField]
 	Text voltageText;
-
+	
     public float voltageProp{ get { return voltage; } }
 
 	
