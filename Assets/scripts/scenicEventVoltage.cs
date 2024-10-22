@@ -13,7 +13,7 @@ public class scenicEventVoltage : ScenicEventMin {
 
     // Update is called once per frame
     override protected void Update () {
-        if (ps.currentStep == forStep)
+        if (ps.actualStep == forStep)
         {
             if ( targetValue == vs.voltageProp)
             {

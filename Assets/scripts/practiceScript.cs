@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class practiceScript : MonoBehaviour {
 
-	public int actualStep =0;
+	public int actualStep { private set; get; }
 	int cuSt;
 	public int currentStep { get { return cuSt; } 
 		set { 
@@ -18,15 +18,20 @@ public class practiceScript : MonoBehaviour {
 	Text practiceText;
 
 	void Start () {
+		Debug.Log(actualStep);
 		currentStep = 0;
+		actualStep = 0;
 	}
 
-	public void StepPlus() { if (currentStep < Description.Length-2 && currentStep<actualStep) currentStep++; }
-    public void StepMinus() { if (currentStep > 0) currentStep--;  }
+	public void StepPlus() 
+	{
+		if ( currentStep < (Description.Length ) && currentStep < actualStep) { currentStep++; Debug.Log("+"); }
+	}
+    public void StepMinus() { if (currentStep >= 1) { currentStep--; Debug.Log("-"); } }
 	public void addActualStep(int actual) 
 	{
 		actualStep += actual;
-		currentStep += 1;
+		currentStep = actualStep;
 		
 	}
 }

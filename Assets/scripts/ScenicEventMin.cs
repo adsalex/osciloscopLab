@@ -18,7 +18,7 @@ public class ScenicEventMin : MonoBehaviour {
 	}
 	private void moveStep() 
 	{
-		if(ps.currentStep == forStep) 
+		if(ps.actualStep == forStep) 
 		{
 				ps.addActualStep(addSteps);
 		}

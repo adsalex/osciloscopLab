@@ -29,6 +29,6 @@ public class scenicEvent : MonoBehaviour {
 	}
 	void eventTrue() 
 	{
-		if (ps.actualStep == stepArray[internalStep] && isUnuseds[internalStep]) { ps.addActualStep(newSteps[internalStep]);internalStep++; } 
+		//if (ps.actualStep == stepArray[internalStep] && isUnuseds[internalStep]) { ps.addActualStep(newSteps[internalStep]);internalStep++; } 
 	}
 }

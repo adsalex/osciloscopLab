@@ -14,9 +14,8 @@ public class scenicEventAmpere : ScenicEventMin {
 	
 	// Update is called once per frame
 	override protected void Update () {
-		if (ps.currentStep == forStep)
+		if (ps.actualStep == forStep)
         {
-            Debug.Log(AS.Current); 
             if ( targetValue == AS.Current)
             {
                 ps.addActualStep(addSteps);

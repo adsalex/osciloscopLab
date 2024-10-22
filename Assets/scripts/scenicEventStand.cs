@@ -14,12 +14,13 @@ public class scenicEventStand : ScenicEventMin {
 	override protected void Start () {
 		stand = GetComponent<StandScript>();
         ps = GameObject.Find("table").GetComponent<practiceScript>();
+        
     }
 
     // Update is called once per frame
     override protected void Update () 
 	{
-        if (ps.currentStep == forStep)
+        if (ps.actualStep == forStep)
         {
             if (capValue == stand.Capacity && resValue == stand.Resistance)
             {

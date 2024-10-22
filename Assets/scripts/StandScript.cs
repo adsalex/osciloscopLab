@@ -32,7 +32,7 @@ public class StandScript : MonoBehaviour {
     float resistance = 0;
     [SerializeField]
     float resistanceProportion = 1f;
-    float baseResistance = 1000f;
+    float baseResistance = 5500f;
     float voltagePercentage = 0.7f;
     [SerializeField]
 	BankHandleScript[] CapasitorHandles;

@@ -15,7 +15,7 @@ public class ScenicEventStates : ScenicEventMin {
     // Update is called once per frame
     override protected void Update () 
 	{
-        if (ps.currentStep == forStep)
+        if (ps.actualStep == forStep)
         {
             if (reqState == sw.stateReader)
             {
