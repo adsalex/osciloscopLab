@@ -11,17 +11,19 @@ public class TableScript : MonoBehaviour {
 	int deltaY = 50;
 
 	[SerializeField]
-	int rows =4;
+	InputField input;
 	[SerializeField]
-	int columns =5;
+	int rows =4;
+	int columns;
+	int totalFieldLenght;
 
 	[SerializeField]
 	GameObject record;
 
 	float proportionX;
 	float proportionY;
-	int valInd = 0;
-
+	
+	int CellToWrite=0;
     Text[] headers;
 	[SerializeField]
 	string[] texts;
@@ -29,11 +31,13 @@ public class TableScript : MonoBehaviour {
 	 //List<Text> tablefields = new List<Text>();
 	void Start () 
 	{
+		
 		columns = texts.Length;
-		tablefields = new Text[rows*columns];
-       
+        totalFieldLenght = rows * columns;
+        tablefields = new Text[totalFieldLenght];
+        
 
-		proportionY = Screen.height;
+        proportionY = Screen.height;
         proportionY /= 720;
 
         proportionX = Screen.width;
@@ -47,18 +51,44 @@ public class TableScript : MonoBehaviour {
 			text.text = texts[j];
         }
 
-        for (int i = 1; i < rows;i++) 
+        for (int i = 0; i < rows;i++) 
 		{
 			for(int j = 0;j< columns; j++) 
 			{
 				GameObject go = Instantiate(record,transform);
-				go.transform.Translate(new Vector3(proportionX*j*deltaX, proportionY * i *-deltaY,0));
+				go.transform.Translate(new Vector3(proportionX*j*deltaX, proportionY * (i+1) *-deltaY,0));
+				tablefields[i * columns + j] = go.GetComponent<Text>();
 			}
 		}
+		Debug.Log(totalFieldLenght);
+		//tablefields[19].text = "2";
+		Clear();
 	}
 	
 	void Update () 
 	{
 			
 	}
+
+	public void Clear() 
+	{
+		foreach (Text t in tablefields) 
+		{
+			t.text = "/";
+		}
+		CellToWrite = 0;
+	}
+	public void WriteValue() 
+	{
+		if(CellToWrite < totalFieldLenght) 
+		{
+			tablefields[CellToWrite++].text = input.text;
+			
+		}
+		else 
+		{
+			CellToWrite = 0;
+		}
+        input.text = "";
+    }
 }
