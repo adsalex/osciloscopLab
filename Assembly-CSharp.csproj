@@ -65,9 +65,11 @@
      <Compile Include="Assets\scripts\scenicEvent.cs" />
      <Compile Include="Assets\scripts\scenicEventAmpere.cs" />
      <Compile Include="Assets\scripts\ScenicEventMin.cs" />
+     <Compile Include="Assets\scripts\scenicEventStand.cs" />
      <Compile Include="Assets\scripts\ScenicEventStates.cs" />
      <Compile Include="Assets\scripts\scenicEventVoltage.cs" />
      <Compile Include="Assets\scripts\StandScript.cs" />
+     <Compile Include="Assets\scripts\TableScript.cs" />
      <Compile Include="Assets\scripts\Tipper.cs" />
      <Compile Include="Assets\scripts\VoltageScript.cs" />
  <Reference Include="UnityEngine.CoreModule">

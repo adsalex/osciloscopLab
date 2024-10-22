@@ -16,6 +16,7 @@ public class scenicEventAmpere : ScenicEventMin {
 	override protected void Update () {
 		if (ps.currentStep == forStep)
         {
+            Debug.Log(AS.Current); 
             if ( targetValue == AS.Current)
             {
                 ps.addActualStep(addSteps);

@@ -22,7 +22,10 @@ GameObject:
   - component: {fileID: 223559537557117574}
   - component: {fileID: 114254606267322260}
   - component: {fileID: 114109564858379164}
-  m_Layer: 5
+  - component: {fileID: 114096351682049434}
+  - component: {fileID: 114729989122181132}
+  - component: {fileID: 114043987772964362}
+  m_Layer: 0
   m_Name: amperePan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +42,7 @@ GameObject:
   - component: {fileID: 224876109252780208}
   - component: {fileID: 222622776016067640}
   - component: {fileID: 114518460396291376}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,13 +59,47 @@ GameObject:
   - component: {fileID: 224911999042229646}
   - component: {fileID: 222569094136197902}
   - component: {fileID: 114823129225977450}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: backgroud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114043987772964362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007110682191482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55663b9e278108344ac4a46a83341691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voltage: 0
+  resistance: 1000
+  text: {fileID: 114518460396291376}
+  image: {fileID: 114823129225977450}
+  diaposoneSwitch: {fileID: 0}
+  powerSwitch: {fileID: 0}
+  vs: {fileID: 0}
+--- !u!114 &114096351682049434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007110682191482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49196652a7331334f86be59804ddc505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addSteps: 1
+  forStep: 4
+  ps: {fileID: 0}
+  AS: {fileID: 0}
+  targetValue: 0
 --- !u!114 &114109564858379164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,8 +157,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: b80d82469cf610748acd2cb554498834, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -133,6 +170,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0.76 A
+--- !u!114 &114729989122181132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007110682191482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49196652a7331334f86be59804ddc505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addSteps: 1
+  forStep: 5
+  ps: {fileID: 0}
+  AS: {fileID: 0}
+  targetValue: 0
 --- !u!114 &114823129225977450
 MonoBehaviour:
   m_ObjectHideFlags: 1

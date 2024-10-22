@@ -12,8 +12,8 @@ public class StandScript : MonoBehaviour {
     const float maxAmplitude = 0.14f;
     [SerializeField]
     public float voltage;
-	
-    public float capacity;
+    [SerializeField]
+    float capacity;
 	
 	[SerializeField]
 	float ampModifyer = 2f;
@@ -43,7 +43,9 @@ public class StandScript : MonoBehaviour {
     float capacityProportion = 1f;
     float baseCapacity = 100f;
     
+    public float Capacity { get { return capacity; } }
 
+    public float Resistance { get { return resistance; } }
     // Use this for initialization
     void Start () {
         

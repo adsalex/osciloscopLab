@@ -17,7 +17,10 @@ public class VoltageScript : MonoBehaviour {
 
 	
 	void Start () {
-		voltageText.text = "0 V"; 
+		voltage = 40;
+		transform.Rotate(Vector3.forward*60);
+		voltageText.text = "40 V"; 
+
 	}
 	
 	// Update is called once per frame
