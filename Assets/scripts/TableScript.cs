@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TableScript : MonoBehaviour {
 
 	[SerializeField]
-	int deltaX =120;
+	int deltaX =30;
 	[SerializeField]
 	int deltaY = 50;
 
@@ -28,8 +28,14 @@ public class TableScript : MonoBehaviour {
 	[SerializeField]
 	string[] texts;
     Text[] tablefields;
-	 //List<Text> tablefields = new List<Text>();
-	void Start () 
+
+	[SerializeField]
+	float constArray;
+    [SerializeField]
+    int calcShift =4;
+
+    //List<Text> tablefields = new List<Text>();
+    void Start () 
 	{
 		
 		columns = texts.Length;
@@ -49,6 +55,8 @@ public class TableScript : MonoBehaviour {
             go.transform.Translate(new Vector3(proportionX * j * deltaX, 0,0));
 			Text text = go.GetComponent<Text>();
 			text.text = texts[j];
+			Debug.Log(texts[j]);
+			
         }
 
         for (int i = 0; i < rows;i++) 
@@ -60,8 +68,7 @@ public class TableScript : MonoBehaviour {
 				tablefields[i * columns + j] = go.GetComponent<Text>();
 			}
 		}
-		Debug.Log(totalFieldLenght);
-		//tablefields[19].text = "2";
+		
 		Clear();
 	}
 	
@@ -82,7 +89,15 @@ public class TableScript : MonoBehaviour {
 	{
 		if(CellToWrite < totalFieldLenght) 
 		{
-			tablefields[CellToWrite++].text = input.text;
+			if (CellToWrite%columns > calcShift)
+			{
+				CellToWrite = ((CellToWrite / columns)+1)* columns;
+                tablefields[CellToWrite].text = input.text;
+            }
+            else 
+			{ 
+				tablefields[CellToWrite++].text = input.text; 
+			}
 			
 		}
 		else 
@@ -91,4 +106,9 @@ public class TableScript : MonoBehaviour {
 		}
         input.text = "";
     }
+
+	public void calculate() 
+	{
+		
+	}
 }
