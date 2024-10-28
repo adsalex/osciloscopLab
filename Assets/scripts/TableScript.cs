@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,6 +35,7 @@ public class TableScript : MonoBehaviour {
 	float constArray;
     [SerializeField]
     int calcShift =4;
+    string flNumRegex = @"-?\d+(\.\d+)?";
 
     //List<Text> tablefields = new List<Text>();
     void Start () 
@@ -87,22 +90,30 @@ public class TableScript : MonoBehaviour {
 	}
 	public void WriteValue() 
 	{
-		if(CellToWrite < totalFieldLenght) 
+		string buff= input.text;
+		Match match = Regex.Match(buff,flNumRegex);
+		float val =0;
+
+		if (float.TryParse(match.Value, out val))
 		{
-			if (CellToWrite%columns > calcShift)
+
+			if (CellToWrite < totalFieldLenght)
 			{
-				CellToWrite = ((CellToWrite / columns)+1)* columns;
-                tablefields[CellToWrite].text = input.text;
-            }
-            else 
-			{ 
-				tablefields[CellToWrite++].text = input.text; 
+				if (CellToWrite % columns > calcShift)
+				{
+					CellToWrite = ((CellToWrite / columns) + 1) * columns;
+					tablefields[CellToWrite].text = match.Value;
+				}
+				else
+				{
+					tablefields[CellToWrite++].text = match.Value;
+				}
+
 			}
-			
-		}
-		else 
-		{
-			CellToWrite = 0;
+			else
+			{
+				CellToWrite = 0;
+			}
 		}
         input.text = "";
     }
