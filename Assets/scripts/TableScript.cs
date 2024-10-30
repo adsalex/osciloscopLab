@@ -13,6 +13,24 @@ public class TableScript : MonoBehaviour {
 	int deltaY = 50;
 
 	[SerializeField]
+	float ElFieldCoeff = 0;
+
+
+    [SerializeField]
+    float inductionDivCoeff = 0;
+
+	[SerializeField]
+	float sensY = 0;
+    [SerializeField]
+    float sensX = 0;
+
+
+	float induction;
+    float elField;
+
+
+
+    [SerializeField]
 	InputField input;
 	[SerializeField]
 	int rows =4;
@@ -120,6 +138,45 @@ public class TableScript : MonoBehaviour {
 
 	public void calculate() 
 	{
-		
-	}
+		for (int i = 0; i < rows; i++)
+		{
+			bool signal = true;
+			float[] parsingBufferArray = new float[5];
+			
+			for (int k = 0; k < parsingBufferArray.Length; k++)
+			{
+				if(!float.TryParse(tablefields[i * columns + k].text, out parsingBufferArray[k])) signal = false;
+			
+			}
+			
+			if (!signal) continue; 
+
+            for (int j = 0; j < columns; j++)
+            {
+				switch (j) 
+				{
+					case 5:
+						tablefields[i * columns + j].text = sensX.ToString();break;
+                    case 6:
+                        tablefields[i * columns + j].text = sensY.ToString(); break;
+                    case 7:
+						
+						
+						//if () { }
+						tablefields[i * columns + j].text = sensX.ToString();
+						break;//Hk
+                    case 8:
+                        tablefields[i * columns + j].text = sensX.ToString(); break;//B ост
+                    case 9:
+                        tablefields[i * columns + j].text = sensX.ToString(); break;//H m
+                    case 10:
+                        tablefields[i * columns + j].text = sensX.ToString(); break;//B m
+                   
+
+
+                }
+                //tablefields[i * columns + j];
+            }
+        }
+    }
 }
