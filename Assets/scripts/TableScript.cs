@@ -54,6 +54,8 @@ public class TableScript : MonoBehaviour {
     [SerializeField]
     int calcShift =4;
     string flNumRegex = @"-?\d+(\.\d+)?";
+	[SerializeField]
+	public StandScript sc;
 
     //List<Text> tablefields = new List<Text>();
     void Start () 
@@ -141,16 +143,16 @@ public class TableScript : MonoBehaviour {
 		for (int i = 0; i < rows; i++)
 		{
 			bool signal = true;
-			float[] parsingBufferArray = new float[5];
+			float[] parsingBufferArray = new float[4];
 			
 			for (int k = 0; k < parsingBufferArray.Length; k++)
 			{
-				if(!float.TryParse(tablefields[i * columns + k].text, out parsingBufferArray[k])) signal = false;
+				if(!float.TryParse(tablefields[i * columns + k+1].text, out parsingBufferArray[k])) signal = false;
 			
 			}
 			
 			if (!signal) continue; 
-
+			
             for (int j = 0; j < columns; j++)
             {
 				switch (j) 
@@ -160,17 +162,17 @@ public class TableScript : MonoBehaviour {
                     case 6:
                         tablefields[i * columns + j].text = sensY.ToString(); break;
                     case 7:
-						
-						
-						//if () { }
-						tablefields[i * columns + j].text = sensX.ToString();
-						break;//Hk
+                        tablefields[i * columns + j].text = (sensX * parsingBufferArray[2]).ToString();
+                        break;//Hk
                     case 8:
-                        tablefields[i * columns + j].text = sensX.ToString(); break;//B ост
+						tablefields[i * columns + j].text = ((sc.Resistance* sc.Capacity  * sensY * parsingBufferArray[1])/inductionDivCoeff).ToString();
+						break; //B ост
                     case 9:
-                        tablefields[i * columns + j].text = sensX.ToString(); break;//H m
+                        
+                        tablefields[i * columns + j].text = (ElFieldCoeff* sensX * parsingBufferArray[0]).ToString(); break;//H m
                     case 10:
-                        tablefields[i * columns + j].text = sensX.ToString(); break;//B m
+                        tablefields[i * columns + j].text = ((sc.Resistance * sc.Capacity * ElFieldCoeff * sensY * parsingBufferArray[1]) / inductionDivCoeff).ToString();
+                        break;//B m
                    
 
 

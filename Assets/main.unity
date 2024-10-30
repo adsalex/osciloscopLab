@@ -5637,6 +5637,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deltaX: 100
   deltaY: 80
+  ElFieldCoeff: 0.7
+  inductionDivCoeff: 100000
+  sensY: 0.25
+  sensX: 0.25
   input: {fileID: 2033817279}
   rows: 4
   record: {fileID: 1183736100248650, guid: cabaadff515e7f84eb81f6e23a22a534, type: 2}
@@ -5654,6 +5658,7 @@ MonoBehaviour:
   - Bm
   constArray: 0
   calcShift: 4
+  sc: {fileID: 953095283}
 --- !u!114 &2145011234
 MonoBehaviour:
   m_ObjectHideFlags: 0
