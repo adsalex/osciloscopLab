@@ -123,6 +123,7 @@ public class TableScript : MonoBehaviour {
 				{
 					CellToWrite = ((CellToWrite / columns) + 1) * columns;
 					tablefields[CellToWrite].text = match.Value;
+					CellToWrite++;
 				}
 				else
 				{
